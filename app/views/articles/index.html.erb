@@ -1,19 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container">
-  <h1>Alle Regionen</h1>
-  <div class="row">
-    <% @articles.each do |article| %>
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <%= image_tag(article.image_url, class: "img-responsive product_image") %>
-        <p><%= article.releasedate %></p>
-        <h2><%= article.title %></h2>
-        <%= link_to 'Show', article %>
-        <%= link_to 'Edit', edit_article_path(article) %>
-        <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
-    <% end %>
+  <div class="articleList">
+  <% @articles.each do |article| %>
+    <div class="articleTeaser">
+      <%= image_tag(article.image_url, class: "img-responsive product_image") %>
+      <p class="date"><%= article.releasedate %></p>
+      <h2><%= article.title %></h2>
+      <!--<%= link_to 'Show', article %>
+      <%= link_to 'Edit', edit_article_path(article) %>
+      <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>-->
+    </div>
+  <% end %>
   </div>
 </div>
 
-<%= link_to 'New Article', new_article_path %>
+<!--<%= link_to 'New Article', new_article_path %>-->

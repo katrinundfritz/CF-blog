@@ -4,5 +4,78 @@ body {
 
 footer {
   height: 150px;
-  background-color: #41b3a3;
+  background-color: #b4dbc0;
+  margin-top: 60px;
+}
+
+a {
+  color: #7d9986;
+}
+
+a:hover {
+  color: #a2c5ac;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 2em;
+}
+
+p,
+a,
+h2,
+h3 {
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stage p {
+  font-family: 'Amatic SC', cursive;
+  font-size: 6em;
+  display: block;
+  text-align: center;
+}
+
+.stage ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+.stage ul li {
+  list-style: none;
+  margin: 0 15px 0 15px;
+}
+
+.stage ul li .active {
+  color: black;
+  font-weight: bold;
+}
+
+.articleList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.articleTeaser {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.articleTeaser .date {
+  margin-top: 15px;
 }
