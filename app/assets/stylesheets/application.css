@@ -1,3 +1,5 @@
+/* General stylings */
+
 body {
   background-color: white;
 }
@@ -34,6 +36,16 @@ h2 {
   font-size: 2em;
 }
 
+/* Navigation */
+button.navbar-toggle {
+  background-color: #b4dbc0;
+}
+button.navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+/* Index */
+
 .stage {
   display: flex;
   flex-direction: column;
@@ -69,6 +81,14 @@ h2 {
   align-items: center;
 }
 
+.articleList a {
+  margin-top: 10px;
+}
+
+.articleList img {
+  width: 600px;
+}
+
 .articleTeaser {
   margin-top: 60px;
   display: flex;
@@ -76,6 +96,21 @@ h2 {
   align-items: center;
 }
 
-.articleTeaser .date {
+.date {
   margin-top: 15px;
+}
+
+/* Show */
+
+.containerArticle {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 55%;
+  margin:auto;
+}
+
+.containerArticle img {
+  margin: 20px 0 20px 0;
 }

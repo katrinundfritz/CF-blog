@@ -1,14 +1,35 @@
-<p id="notice"><%= notice %></p>
+<div class="stage">
+  <ul>
+    <li>
+      <a href="/" id="all" class="active">Alle Regionen</a>
+    </li>
+    <li>
+      <a href="#" id="afrika">Afrika</a>
+    </li>
+    <li>
+      <a href="#" id="asien">Asien</a>
+    </li>
+    <li>
+      <a href="#" id="europa">Europa</a>
+    </li>
+    <li>
+      <a href="#" id="nordamerika">Nordamerika</a>
+    </li>
+    <li>
+      <a href="#" id="suedamerika">Südamerika</a>
+    </li>
+  </ul>
+</div>
 
 <div class="container">
   <div class="articleList">
   <% @articles.each do |article| %>
     <div class="articleTeaser">
-      <%= image_tag(article.image_url, class: "img-responsive product_image") %>
+      <%= image_tag(article.image_url, class: "img-responsive") %>
       <p class="date"><%= article.releasedate %></p>
       <h2><%= article.title %></h2>
-      <!--<%= link_to 'Show', article %>
-      <%= link_to 'Edit', edit_article_path(article) %>
+      <%= link_to 'Lesen', article %>
+      <!--<%= link_to 'Edit', edit_article_path(article) %>
       <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>-->
     </div>
   <% end %>
