@@ -1,3 +1,4 @@
+<!--
 <div class="stage">
   <ul>
     <li>
@@ -19,14 +20,14 @@
       <a href="#" id="suedamerika">Südamerika</a>
     </li>
   </ul>
-</div>
+</div>-->
 
 <div class="container">
   <div class="articleList">
   <% @articles.each do |article| %>
     <div class="articleTeaser">
       <%= image_tag(article.image_url, class: "img-responsive") %>
-      <p class="date"><%= article.releasedate %></p>
+      <p class="date"><%= l article.releasedate, format: :default %></p>
       <h2><%= article.title %></h2>
       <%= link_to 'Lesen', article %>
       <!--<%= link_to 'Edit', edit_article_path(article) %>

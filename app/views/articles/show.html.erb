@@ -1,7 +1,7 @@
 <div class="containerArticle">
   <%= link_to 'Zurück zur Übersicht', articles_path %>
   <p class="date">
-    <%= @article.releasedate %>
+    <%= l @article.releasedate, format: :default %>
   </p>
   <h2>
     <%= @article.title %>
