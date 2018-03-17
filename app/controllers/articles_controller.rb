@@ -6,7 +6,6 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
     @articles = Article.order("releasedate desc")
-
   end
 
   # GET /articles/1
@@ -71,6 +70,6 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :body, :releasedate, :image_url)
+      params.require(:article).permit(:title, :body, :releasedate, :image_url, :category)
     end
 end
