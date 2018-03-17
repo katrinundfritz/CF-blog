@@ -5,6 +5,8 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.all
+    @articles = Article.order("releasedate desc")
+
   end
 
   # GET /articles/1
