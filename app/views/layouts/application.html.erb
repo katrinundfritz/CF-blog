@@ -28,14 +28,14 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
-          <li>
-            <a href="/" id="blog">Blog</a>
+          <li class="<%= 'active' if current_page?(root_path) %>">
+            <%= link_to "Blog", root_path, id: "blog" %>
           </li>
-          <li>
-            <a href="/simple_pages/about" id="about">About</a>
+          <li class="<%= 'active' if current_page?(simple_pages_about_path) %>">
+            <%= link_to "About", simple_pages_about_path, id: "about" %>
           </li>
-          <li>
-            <a href="/simple_pages/contact" id="contact">Kontakt</a>
+          <li class="<%= 'active' if current_page?(simple_pages_contact_path) %>">
+            <%= link_to "Contact", simple_pages_contact_path, id: "contact" %>
           </li>
         </ul>
         <!--<form class="navbar-form navbar-right">

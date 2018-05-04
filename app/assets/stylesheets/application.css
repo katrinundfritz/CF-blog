@@ -44,6 +44,14 @@ button.navbar-toggle .icon-bar {
   background-color: white;
 }
 
+.navbar-nav>li>a:hover {
+  background-color: transparent;
+}
+
+.active>a {
+  color: black;
+}
+
 /* Index */
 
 .stage {
