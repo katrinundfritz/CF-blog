@@ -16,6 +16,8 @@
 </head>
 
 <body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
   <nav class="navbar navbar-light">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -36,6 +38,13 @@
           </li>
           <li class="<%= 'active' if current_page?(simple_pages_contact_path) %>">
             <%= link_to "Contact", simple_pages_contact_path, id: "contact" %>
+          </li>
+          <li class="login">
+            <% if user_signed_in? %>
+              <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+            <% else %>
+              <%= link_to('Login', new_user_session_path) %>
+            <% end %>
           </li>
         </ul>
         <!--<form class="navbar-form navbar-right">

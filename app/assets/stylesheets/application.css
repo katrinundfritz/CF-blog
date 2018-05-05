@@ -122,3 +122,82 @@ button.navbar-toggle .icon-bar {
 .containerArticle img {
   margin: 20px 0 20px 0;
 }
+
+/***
+Forms
+***/
+
+label {
+  font-weight:normal;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+.alert {
+  margin: 0px;
+}
+
+.alert-success {
+  background-color: #3b945e;
+  color: white;
+  border-radius: 0px;
+  border: none;
+}
+
+.alert-warning {
+  background-color: #af2141;
+  border-radius: 0px;
+  color: white;
+  border: none;
+}
+
+.login-form {
+  width: 340px;
+  margin: 50px auto;
+}
+
+.remember_me {
+  font-weight: normal;
+}
+
+#error_explanation {
+  border: none;
+  background-color: #af2141;
+  padding: 20px;
+  width: auto;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: normal;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2em;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#error_explanation ul li {
+    font-size: 0.9em;
+    list-style: none;
+    color: white;
+}
+
+.field_with_errors {
+  background-color: transparent;
+}
+
+.field_with_errors label{
+  color: #af2141;
+}
+
+.field_with_errors .form-control{
+  border-color: #af2141;
+  border-width: 2px;
+  width: 100%;
+}
