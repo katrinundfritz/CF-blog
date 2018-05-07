@@ -91,3 +91,5 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: ‘catsareevil.herokuapp.com’ }
 end
+
+config.action_mailer.default_url_options = { host: 'cf-example-blog.herokuapp.com' }
