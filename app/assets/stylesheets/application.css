@@ -36,6 +36,31 @@ h2 {
   font-size: 2em;
 }
 
+.form_heading {
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #a2c5ac;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 10px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:focus-within,
+.btn-primary:visited,
+.btn-primary:active
+.btn-primary:active:focus {
+  background-color: #b4dbc0;
+  box-shadow: none;
+}
+.btn:active:focus {
+  background-color: #b4dbc0;
+  box-shadow: none;
+}
+
 /* Navigation */
 button.navbar-toggle {
   background-color: #b4dbc0;

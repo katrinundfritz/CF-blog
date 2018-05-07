@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-  default from: "message@cf-shop.com"
+  default from: "message@cf-example-blog.herokuapp.com"
 
   def contact_form(email, name, message)
   @message = message
@@ -9,7 +9,7 @@ class UserMailer < ApplicationMailer
   end
 
   def welcome(user)
-  @appname = "Bike Shop"
+  @appname = "Example Blog"
   mail(to: user.email,
        subject: "Welcome to #{@appname}!")
   end
