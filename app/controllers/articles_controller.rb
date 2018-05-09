@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @comments = @article.comments.paginate(:page => params[:page], :per_page => 5).order('created_at DESC')
   end
 
   # GET /articles/new

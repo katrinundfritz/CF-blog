@@ -1,0 +1,16 @@
+<div class="article-comments">
+  <% @comments.each do |comment| %>
+    <div class="comment">
+      <p>
+        <%= comment.user.first_name %>
+        <em><small><%= "#{time_ago_in_words(comment.created_at)} ago" %></small></em>
+        <% if signed_in? && current_user.admin? %>
+          <%= link_to (' <span class="glyphicon glyphicon-remove"></span>').html_safe, article_comment_path(comment.article, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+      </p>
+<!--  <div class="rated" data-score="<%= comment.rating %>">
+</div> -->
+      <p><%= comment.body %></p>
+    </div>
+  <% end %>
+</div>
