@@ -54,6 +54,14 @@
               <%= link_to('Login', new_user_session_path) %>
             <% end %>
           </li>
+          <li>
+            <%= form_with(url: articles_path, method: 'get', local: true, class: "navbar-form") do |form| %>
+            <div class="inner-addon right-addon">
+              <%= form.text_field :q, id: 'q', class: 'q', value: params[:q], placeholder: "Suche..." %>
+              <i class="glyphicon glyphicon-search"></i>
+            </div>
+            <% end %>
+          </li>
         </ul>
         <!--<form class="navbar-form navbar-right">
           <div class="form-group">

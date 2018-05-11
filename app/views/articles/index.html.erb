@@ -23,7 +23,7 @@
 </div>-->
 
 <div class="container">
-  <div class="articleList">  
+  <div class="articleList">
   <% @articles.each do |article| %>
     <div class="articleTeaser">
       <%= image_tag(article.image_url, class: "img-responsive") %>
@@ -34,6 +34,9 @@
       <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>-->
     </div>
   <% end %>
+  </div>
+  <div class="pagination_container">
+  <%= will_paginate @articles %>
   </div>
 </div>
 
