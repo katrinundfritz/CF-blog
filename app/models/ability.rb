@@ -7,7 +7,7 @@ class Ability
       can :manage, User, id: user.id
       can :create, Article
       can :update, Article
-      if user.admin?  # additional permissions for administrators
+      if user.author?  # additional permissions for administrators
         can :destroy, Comment
         can :manage, User
       end
