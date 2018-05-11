@@ -6,10 +6,10 @@ class CommentsController < ApplicationController
 
       respond_to do |format|
         if @comment.save
-          format.html { redirect_to @article, notice: 'Review was created successfully.' }
+          format.html { redirect_to @article, notice: 'Der Kommentar wurde erfolgreich gespeichert.' }
           format.json { render :show, status: :created, location: @article }
         else
-          format.html { redirect_to @article, alert: 'Review was not saved successfully.' }
+          format.html { redirect_to @article, alert: 'Der Kommentar konnte leider nicht gespeichert werden.' }
           format.json { render json: @comment.errors, status: :unprocessable_entity }
         end
       end

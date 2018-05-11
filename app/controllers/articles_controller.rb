@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
       search_term = params[:q]
       @articles = Article.search(search_term).paginate(:page => params[:page], :per_page => 1).order("releasedate desc")
     else
-      @articles = Article.all.paginate(:page => params[:page], :per_page => 1).order("releasedate desc")
+      @articles = Article.all.paginate(:page => params[:page], :per_page => 5).order("releasedate desc")
     end
   end
 

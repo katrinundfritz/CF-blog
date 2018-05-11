@@ -51,6 +51,8 @@ h2 {
   border: none;
   border-radius: 0;
   margin-bottom: 10px;
+  height: 34px;
+  padding: 0 15px 0 15px;;
 }
 
 .btn-primary:hover,
@@ -196,6 +198,12 @@ label {
 
 .form-control {
   border-radius: 0;
+  padding: 10px;
+  resize: none;
+}
+
+.form-control.comment-control {
+  height: 200px;
 }
 
 .alert {
@@ -203,7 +211,7 @@ label {
 }
 
 .alert-success {
-  background-color: #3b945e;
+  background-color: #7d9986;
   color: white;
   border-radius: 0px;
   border: none;
