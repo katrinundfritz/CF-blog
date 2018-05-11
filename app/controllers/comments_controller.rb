@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   def create
       @article = Article.find(params[:article_id])
       @comment = @article.comments.new(comment_params)
-      @comment.user = current_user
+
       respond_to do |format|
         if @comment.save
           format.html { redirect_to @article, notice: 'Review was created successfully.' }
@@ -25,7 +25,7 @@ class CommentsController < ApplicationController
     private
 
     def comment_params
-      params.require(:comment).permit(:body, :rating)
+      params.require(:comment).permit(:body, :name, :email)
     end
 
 end

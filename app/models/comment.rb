@@ -4,5 +4,8 @@ class Comment < ApplicationRecord
 #  scope :rating_desc, -> { order(rating: :desc) }
 #  scope :rating_asc, -> { order(rating: :asc) }
   validates :body, presence: true
-  validates :rating, numericality: { only_integer: true }
+  validates :name, presence: true
+  validates :email, presence: true
+
+#  validates :rating, numericality: { only_integer: true }
 end
