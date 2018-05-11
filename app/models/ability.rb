@@ -5,11 +5,13 @@ class Ability
     can :create, Comment
     if user.present?
       can :manage, User, id: user.id
-      can :create, Article
-      can :update, Article
       if user.author?  # additional permissions for administrators
+        can :manage, Article
+      end
+      if user.moderator?  # additional permissions for administrators
         can :destroy, Comment
         can :manage, User
+        can :update, Comment, :reviewed
       end
     end
   end
