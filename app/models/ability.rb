@@ -2,6 +2,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    can :create, Comment
     if user.present?
       can :manage, User, id: user.id
       can :create, Article

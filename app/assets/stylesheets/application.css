@@ -89,46 +89,37 @@ button.navbar-toggle .icon-bar {
 .navbar-form {
   margin: 0;
   padding: 0;
-
+  margin: 12px 15px 0 15px;
 }
 
 .q {
-  height: 50px;
+  height: 30px;
   border: none;
-  padding: 10px;
   font-size: 1em;
   font-family: 'Rubik', sans-serif;
   width: 100%;
+  border-bottom: 1px solid black;
+  padding: 0;
 }
 
-.inner-addon {
-    position: relative;
-}
-
-.glyphicon {
-  margin-right: 8px;
+::placeholder {
+  color: black;
 }
 
 .inner-addon .glyphicon {
   position: absolute;
   pointer-events: none;
-  margin-top: 18px;
-  padding-right: 10px;
+  margin-top: 8px;
 }
 
-.right-addon .glyphicon { right: 0px;}
-
-.navbar .login {
-
+.right-addon .glyphicon {
+  right: 15px;
 }
 
 
-
-
-
-
-
-/* Index */
+/***
+Article index
+***/
 
 .stage {
   display: flex;
@@ -184,7 +175,7 @@ button.navbar-toggle .icon-bar {
   margin-top: 15px;
 }
 
-/* Show */
+/* Article Show */
 
 .article_header {
   text-align: center;
@@ -312,3 +303,16 @@ Pagination
 .pagination a:hover, .pagination a:focus {
   color: #a2c5ac;
   border-color: #a2c5ac; }
+
+/***
+Media queries
+***/
+
+@media (min-width: 767px) {
+  .q {
+    width: 220px;
+    padding: 0 2px 0 2px;
+  }
+  .inner-addon .glyphicon {
+    margin-top: 17px;
+  }

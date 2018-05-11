@@ -47,6 +47,8 @@
           <li class="<%= 'active' if current_page?(simple_pages_contact_path) %>">
             <%= link_to "Contact", simple_pages_contact_path, id: "contact" %>
           </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
           <li class="login">
             <% if user_signed_in? %>
               <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
@@ -63,6 +65,9 @@
             <% end %>
           </li>
         </ul>
+      </div>
+    </div>
+
         <!--<form class="navbar-form navbar-right">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Search">
