@@ -1,4 +1,6 @@
+<% if @comment %>
 <div class="article-comments">
+  <h3>Kommentare</h3>
   <% @comments.each do |comment| %>
     <div class="comment">
       <p>
@@ -14,3 +16,4 @@
     </div>
   <% end %>
 </div>
+<% end %>

@@ -16,15 +16,16 @@
     <div class="col-md-8 col-md-offset-2">
         <%= @article.body %>
       </p>
+      <% if signed_in? && current_user.admin? %>
       <%= link_to 'Edit', edit_article_path(@article) %>
+      <% end %>
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
-      <h3>Leave a comment</h3>
-        <%= render 'new_comment' %>
         <%= render 'comments' %>
+        <%= render 'new_comment' %>
         <%= will_paginate @comments %>
     </div>
   </div>
