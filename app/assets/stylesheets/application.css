@@ -80,7 +80,12 @@ button.navbar-toggle .icon-bar {
   background-color: white;
 }
 
-.navbar-nav>li>a:hover {
+.navbar-nav>li>a:hover,
+.navbar-nav>li>a:focus,
+.navbar-nav>li>a:focus-within,
+.navbar-nav>li>a:visited,
+.navbar-nav>li>a:active,
+.navbar-nav>li>a:active:focus {
   background-color: transparent;
 }
 
