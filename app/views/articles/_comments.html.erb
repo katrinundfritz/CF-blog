@@ -1,3 +1,4 @@
+
 <div class="article-comments">
   <h3>Kommentare</h3>
   <% @comments.each do |comment| %>
@@ -5,15 +6,20 @@
       <p>
         <%= comment.name %>
         <em><small><%= "#{time_ago_in_words(comment.created_at)} ago" %></small></em>
-        <% if signed_in? && current_user.moderator? %>
-          <div>
-            <%= link_to (' <span class="glyphicon glyphicon-remove"></span>').html_safe, article_comment_path(comment.article, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
-          </div>
-        <% end %>
       </p>
 <!--  <div class="rated" data-score="<%= comment.rating %>">
 </div> -->
       <p><%= comment.body %></p>
+      <% if signed_in? && current_user.moderator? %>
+        <div>
+          <%= form_for [@article, @comment] do |f| %>
+            <%= f.label :reviewed, "Geprüft" %>
+            <%= f.check_box :reviewed %>
+            <%= f.submit %>
+          <% end %>
+          <%= link_to (' <span class="glyphicon glyphicon-remove"></span> Löschen').html_safe, article_comment_path(comment.article, comment), method: :delete, data: { confirm: 'Are you sure?' } %></br></br>
+        </div>
+      <% end %>
     </div>
   <% end %>
 </div>

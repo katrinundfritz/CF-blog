@@ -11,6 +11,10 @@ class Article < ApplicationRecord
     end
   end
 
+  def has_comments?
+    comments.count > 0
+  end
+
 #  def highest_rating_comment
 #    comments.rating_desc.first
 #  end

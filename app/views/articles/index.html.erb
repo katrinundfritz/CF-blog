@@ -23,9 +23,9 @@
 </div>-->
 
 <div class="container">
-  <div class="articleList">
+  <div class="article_list">
   <% @articles.each do |article| %>
-    <div class="articleTeaser">
+    <div class="article_teaser">
       <%= image_tag(article.image_url, class: "img-responsive") %>
       <p class="date"><%= l article.releasedate, format: :default %></p>
       <h2><%= article.title %></h2>

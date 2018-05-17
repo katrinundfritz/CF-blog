@@ -1,7 +1,3 @@
-/*
- *= require jquery.raty
- */
-
 /***
 General
 ***/
@@ -157,21 +153,21 @@ Article index
   font-weight: bold;
 }
 
-.articleList {
+.article_list {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.articleList a {
+.article_list a {
   margin-top: 10px;
 }
 
-.articleList img {
+.articles_urlist img {
   width: 600px;
 }
 
-.articleTeaser {
+.article_teaser {
   margin-top: 60px;
   display: flex;
   flex-direction: column;

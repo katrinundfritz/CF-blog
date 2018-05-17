@@ -24,7 +24,9 @@
 
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
+      <% if @article.has_comments? %>
         <%= render 'comments' %>
+      <% end %>
         <%= render 'new_comment' %>
         <%= will_paginate @comments %>
     </div>
